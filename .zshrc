@@ -13,14 +13,14 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # set ls colors
-LS_COLORS=$LS_COLORS:"di=0;33:" ; export LS_COLORS
+LS_COLORS=$LS_COLORS:"di=1;33:" ; export LS_COLORS
 
 # enable vim mode
 bindkey -v
 bindkey -M viins "" vi-cmd-mode
 KEYTIMEOUT=1
 
-# edit in vim
+# binding to edit command in vim
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "" edit-command-line
@@ -28,11 +28,12 @@ bindkey "" edit-command-line
 # enable reverse search
 bindkey -M viins "" history-incremental-search-backward
 
-# enable tab menu
+# configure tab menu
 autoload -U compinit
 zstyle ":completion:*" menu select
 zmodload zsh/complist
 compinit
+# show hidden files
 _comp_options+=(globdots)
 
 # vi motions for tab menu
@@ -58,10 +59,12 @@ precmd_functions+=(set_cursor_beam)
 
 # set cursor for vim modes
 zle-keymap-select () {
+    # normal mode
     if [[ $KEYMAP == vicmd ]] || 
         [[ $1 = block ]]; then
         set_cursor_block
 
+    # insert mode
     elif [[ $KEYMAP == main ]] ||
         [[ $KEYMAP == viins ]] ||
         [[ $KEYMAP == "" ]] ||
@@ -71,12 +74,26 @@ zle-keymap-select () {
 }
 zle -N zle-keymap-select
 
+# Configure history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+# don't save command if identical to prev 
+setopt HIST_IGNORE_ALL_DUPS
+# save after every command instead of just on exit
+setopt INC_APPEND_HISTORY
+# use history for previous/next between shells
+setopt SHARE_HISTORY
+
 # set aliases
 alias vim="nvim"
+alias cat="bat"
 
-#alias cat="bat"
-
-alias ls="lsd --group-directories-first -v"
+base_ls="eza --group-directories-first --icons=auto --git -h --width=100"
+alias ls=$base_ls
+alias lsl="${base_ls} -l"
+alias lsd="${base_ls} -D"
+alias lsf="${base_ls} -f"
 
 alias rm="rm -i"
 alias rmd="rm -Ir"
@@ -87,4 +104,5 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-
+# enable syntax highlighting
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
