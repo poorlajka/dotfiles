@@ -13,8 +13,6 @@ export PATH="$PATH:~/.local/bin/:~/scripts:$HOME/.cargo/bin"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox-bin"
-source $ZDOTDIR/get_distro_icon.sh
-export DISTRO_ICON=$(get_distro_icon)
 
 # change colors of directories listed by ls to orange 
 LS_COLORS=$LS_COLORS:"di=1;33:" ; export LS_COLORS  
@@ -22,7 +20,7 @@ LS_COLORS=$LS_COLORS:"di=1;33:" ; export LS_COLORS
 #-------------------- prompt --------------------
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M ${DISTRO_ICON} %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # add an empty line before each prompt
 precmd() { echo }
@@ -112,7 +110,7 @@ alias vim="nvim"
 alias cat="bat"
 
 # replace ls with eza
-base_ls="eza --group-directories-first --icons=auto --git -h --width=100"
+base_ls="eza --group-directories-first --icons=auto --git -h"
 alias ls=$base_ls
 alias lsl="${base_ls} -l"
 # list directories only 

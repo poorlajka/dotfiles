@@ -1,0 +1,80 @@
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 60,  
+    "spacing": 5, 
+    //"margin-left":25,
+    //"margin-right":25,
+    //"margin-top":5,
+    "margin-bottom":-25,
+
+    "modules-left": [
+        "custom/distro-icon",
+        "hyprland/workspaces",
+        "tray",
+    ],
+
+    "modules-center": [
+        "custom/spotify",
+    ],
+
+    "modules-right": [
+      //    "wifi", 
+    //    "disk", 
+        "wireplumber", 
+        "network", 
+    //    "cpu", 
+        "cpu",
+        //"memory",
+        "battery",
+        //"bluetooth", 
+        "clock",
+    ],
+
+    "custom/distro-icon": {
+        "format": "{}",
+        "interval": "once",
+        "tooltip": false,
+        "exec": "$HOME/.config/waybar/get_distro_icon.sh",
+    },
+
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null",
+        "exec-if": "pgrep spotify"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-icons": ["", "", "󰕾", ""],
+        "tooltip": false,
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false,
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false,
+    },
+    "cpu": {
+        "interval":1,
+        "format": "{icon0} {icon1} {icon2} {icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "on-click": "alacritty -e nmtui",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname} 󰈀",
+        "format-disconnected": "(No IP)󰌙",
+        "tooltip": false,
+    },
+
+}
+
