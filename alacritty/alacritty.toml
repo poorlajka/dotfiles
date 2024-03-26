@@ -1,0 +1,63 @@
+[colors.cursor]
+cursor = "0x93a1a1"
+text = "0x002b36"
+
+[colors.primary]
+background = "#09090F"
+foreground = '#d4be98'
+
+# Normal colors
+[colors.normal]
+black   = '#32302f'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'
+
+# Bright colors (same as normal colors)
+[colors.bright]
+black   = '#32302f'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 17
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+#family = "undefined medium"
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[window]
+opacity = 1#0.85
+
+[window.padding]
+x = 30
+y = 30
+
+[cursor]
+style = { blinking = "On" }
+

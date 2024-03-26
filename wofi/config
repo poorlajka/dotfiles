@@ -1,0 +1,10 @@
+mode=drun
+allow_images=true
+height=30%
+width=40%
+prompt=search
+y=300
+x=550
+search=
+no_actions=true
+filter_rate=100
