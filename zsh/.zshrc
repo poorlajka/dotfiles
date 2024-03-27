@@ -14,8 +14,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox-bin"
 
-# change colors of directories listed by ls to orange 
-LS_COLORS=$LS_COLORS:"di=1;33:" ; export LS_COLORS  
+# change colors of directories listed by ls to light purple 
+LS_COLORS=$LS_COLORS:"di=1;95:" ; export LS_COLORS  
 
 #-------------------- prompt --------------------
 

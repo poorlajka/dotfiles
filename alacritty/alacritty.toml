@@ -32,9 +32,10 @@ white   = '#d4be98'
 TERM = "xterm-256color"
 
 [font]
-size = 17
+size = 15.5
 
 [font.bold]
+#family = "FiraCode Nerd Font"
 family = "FiraCode Nerd Font"
 style = "Bold"
 

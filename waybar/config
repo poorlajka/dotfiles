@@ -11,7 +11,7 @@
     "modules-left": [
         "custom/distro-icon",
         "hyprland/workspaces",
-        "tray",
+        "wlr/taskbar"
     ],
 
     "modules-center": [
@@ -46,12 +46,12 @@
         "exec-if": "pgrep spotify"
     },
     "wireplumber": {
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
         "format-icons": ["", "", "󰕾", ""],
         "tooltip": false,
     },
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{icon}  {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false,
     },
@@ -70,11 +70,33 @@
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "on-click": "alacritty -e nmtui",
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} 󰈀",
-        "format-disconnected": "(No IP)󰌙",
+        "format-wifi": "  {essid} ",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰌙 (No IP)",
         "tooltip": false,
     },
+    "tray": {
+        "icon-size": 25,
+        "spacing": 13
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 30,
+        "icon-theme": "Numix-Circle",
+        "tooltip": false,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+}
 
 }
 
