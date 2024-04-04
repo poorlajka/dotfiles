@@ -3,8 +3,8 @@ local nnoremap = vim.keymap.set
 local silent = { silent = true }
 
 -- Make ctrl-c behave like esc
-nnoremap("!", "<C-c>", "<C-c><silent>", silent)
-nnoremap("n", "<C-c>", "<Esc>", silent)
+nnoremap("!", "<C-c>", "<Esc>", silent)
+nnoremap("n", "<C-c>", "<silent> <C-c>")
 
 -- Run macro q
 nnoremap({ 'n', 'v' }, "<C-q>", ":normal @q <CR>", silent)

@@ -3,9 +3,6 @@
     "position": "top", 
     "height": 60,  
     "spacing": 5, 
-    //"margin-left":25,
-    //"margin-right":25,
-    //"margin-top":5,
     "margin-bottom":-25,
 
     "modules-left": [
@@ -19,15 +16,10 @@
     ],
 
     "modules-right": [
-      //    "wifi", 
-    //    "disk", 
         "wireplumber", 
         "network", 
-    //    "cpu", 
         "cpu",
-        //"memory",
         "battery",
-        //"bluetooth", 
         "clock",
     ],
 
@@ -45,28 +37,34 @@
         "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null",
         "exec-if": "pgrep spotify"
     },
+
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-icons": ["", "", "󰕾", ""],
         "tooltip": false,
     },
+
     "battery": {
         "format": "{icon}  {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false,
     },
+
     "clock": {
         "format-alt": "{:%Y-%m-%d}",
         "tooltip": false,
     },
+
     "cpu": {
         "interval":1,
         "format": "{icon0} {icon1} {icon2} {icon3}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
+
     "memory": {
         "format": "{}% "
     },
+    
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "on-click": "alacritty -e nmtui",
@@ -75,10 +73,12 @@
         "format-disconnected": "󰌙 (No IP)",
         "tooltip": false,
     },
+
     "tray": {
         "icon-size": 25,
         "spacing": 13
     },
+
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 30,

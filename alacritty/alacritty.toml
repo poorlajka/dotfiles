@@ -35,7 +35,6 @@ TERM = "xterm-256color"
 size = 15.5
 
 [font.bold]
-#family = "FiraCode Nerd Font"
 family = "FiraCode Nerd Font"
 style = "Bold"
 
@@ -48,7 +47,6 @@ family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-#family = "undefined medium"
 family = "FiraCode Nerd Font"
 style = "Regular"
 

@@ -22,8 +22,6 @@ window#waybar {
     */
 }
 #workspaces button{
-    color: 	#d4be98 ;
-    color:  #d3869b;
     color: 	#89b4fa;
     background: #09090F;
     margin-right: 10px;
@@ -38,7 +36,6 @@ window#waybar {
 
 #workspaces button.active{
     background: #89b4fa ;
-    background:  #d3869b;
     color: #09090F;
     margin-right: 10px;
     border-radius: 15px;
@@ -46,31 +43,17 @@ window#waybar {
     background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
     background-size: 400% 400%;
     color: black;
-    background: #89b4fa ;
 
 }
 
-#window {
-    min-width:  100px;
-    color: 	#89b4fa;
-    color:  #d3869b;
-    background: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-
-}
-
-#language {
-    color: 	#89b4fa;
+#window,
+#cpu,
+#network,
+#wireplumber,
+#clock,
+#custom-spotify,
+#custom-distro-icon,
+#battery {
     color:  #d3869b;
     background: #09090F;
 
@@ -87,21 +70,6 @@ window#waybar {
 }
 
 #clock {
-    color: 	#89b4fa;
-    color:  #d3869b;
-    color: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-
     background: rgb(205,214,244);
     background: linear-gradient(118deg, rgba(205,214,244,1) 5%, rgba(243,139,168,1) 5%, rgba(243,139,168,1) 20%, rgba(205,214,244,1) 20%, rgba(205,214,244,1) 40%, rgba(243,139,168,1) 40%, rgba(243,139,168,1) 60%, rgba(205,214,244,1) 60%, rgba(205,214,244,1) 80%, rgba(243,139,168,1) 80%, rgba(243,139,168,1) 95%, rgba(205,214,244,1) 95%); 
 
@@ -114,79 +82,8 @@ window#waybar {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
-#battery {
-    color: 	#89b4fa;
-    color:  #d3869b;
-    background: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-}
-
-#cpu {
-    color: 	#89b4fa;
-    background: #09090F;
-    color:  #d3869b;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-}
-
-#memory {
-    color:  #d3869b;
-    color: 	#89b4fa;
-    background: #09090F;
-    color:  #d3869b;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-}
-#wireplumber {
-    color:  #d3869b;
-    background: #09090F;
-    color: 	#89b4fa;
-    color:  #d3869b;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-}
 
 #taskbar {
-    color:  #d3869b;
-    color:  #d3869b;
-    background: transparent;
     background: #09090F;
     border: none;
     color: 	#89b4fa;
@@ -204,62 +101,12 @@ window#waybar {
     margin-top: 10px;
 }
 
-#network {
-    color: 	#89b4fa;
-    color:  #d3869b;
-    color:  #d3869b;
-    background: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-}
 
 #custom-spotify {
-    color:  #d3869b;
-    color:  #d3869b;
     color: 	#89b4fa;
-    background: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
 }
 
 #custom-distro-icon {
-    color: 	#d4be98 ;
-    background: #09090F;
-
-    margin-right: 10px;
-    border-radius: 15px;
-
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
-    margin-top: 10px;
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    padding: 20px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    font-weight: bolder;
-
     background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
     background-size: 400% 400%;
     color: black;
